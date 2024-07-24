@@ -3,13 +3,13 @@
 
 # Uncomment and set the URL of your site (with protocol, e.g. `https://`)
 # NOTE: You don't need to provide this property when hosting on GitHub Pages or Netlify.
-url:                   https://leejeonghwi.github.io/fruitnet.github.io/
+# url:                   https://username.github.io
 
 # Uncomment and set the "base URL" of your site.
 # When your site is in a subdirectory, set to `/<name of directory>`,
 # with a leading `/` but no trailing `/`. Use the empty string '' otherwise.
 # NOTE: You don't need to provide this property when hosting on GitHub Pages or Netlify.
-baseurl:               '/fruitnet.github.io'
+# baseurl:               '/hydejack-starter-kit'
 
 
 # General settings
@@ -17,19 +17,18 @@ baseurl:               '/fruitnet.github.io'
 
 # Language of your content in 2-letter code, e.g.: en, de.
 # You may also provide a location, e.g.: en-us, de_AT.
-lang:                  en
+lang:                  ko-KR, en-US
 
 # The title of your blog. Used in the sidebar and the browser tab.
-title:                 FruitNet Tech Blog
+title:                 FruitNet
 
 # A short description (~150 chars) of the page used for the meta description tag.
 # Can use markdown, but no more than one paragraph (enforced by `>`)
 description:           >
-  Hydejack is a boutique Jekyll theme for hackers, nerds, and academics,
-  with a focus on personal sites that are meant to impress.
+  과일망의 테크블로그
 
 # A shorter description for the sidebar.
-tagline:               Tech / ML Blog
+tagline:               FruitNet's Tech/Dev Blog
 
 # A list of keywords for your blog
 keywords:              []
@@ -42,19 +41,24 @@ logo:                  /assets/img/logo.png
 # This should be the same author as first entry in `_data/authors.yml`.
 author:
   # Used by `jekyll-feed`:
-  name:                <firstname> <lastname>
-  email:               <mail@domain.tld>
+  name:                JeongHwi Lee
+  email:               wjdgnl97@gmail.com
   # # Used by `jekyll-seo-tag`:
   # twitter:             <username>
 
 # Add links to the sidebar.
 menu:
-  - title:             Naver BoostCamp
-    url:               /example/
-  - title:             DevLog
-    url:               /docs/
-  - title:             Archive
-    url:               https://fruitnet-blog.vercel.app/
+  - title:             BoostCamp
+    url:               /boostcamp/
+  - title:             Dev. Log
+    url:               /devlog/
+    submenu:
+      - title: Algorithm
+        url: /algorithm/
+      - title: ML/DL
+        url: /mldl/
+      - title: Blog
+        url: /blog/
   - title:             About
     url:               /about/
 
@@ -69,7 +73,7 @@ legal:
     url:               /CHANGELOG/
 
 # This text will appear in a `<small>` tag in the footer of every page.
-copyright:             © 2021. All rights reserved.
+copyright:             © 2024. All rights reserved.
 
 # Format of the permalinks
 permalink:             /:categories/:year-:month-:day-:title/
@@ -82,8 +86,8 @@ paginate_path:         /:num/
 # Theme
 # ---------------------------------------------------------------------------------------
 
-# theme: jekyll-theme-hydejack
-remote_theme: hydecorp/hydejack@v9
+theme: jekyll-theme-hydejack
+# remote_theme: hydecorp/hydejack@v9
 
 
 # Customizaton
@@ -361,11 +365,11 @@ plugins:
 #   admins:              <id>
 
 # Used on index and about sites
-social:
+# social:
 #   name:                <firstname> <lastname>
-  links:
+#   links:
 #     - https://twitter.com/<username>
-    - https://github.com/LeeJeongHwi
+#     - https://github.com/<username>
 
 
 # Plugin Configs
