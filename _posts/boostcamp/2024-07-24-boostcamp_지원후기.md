@@ -2,7 +2,7 @@
 layout: post
 title: Boostcamp AI Tech 7기 지원 후기
 description: >
-  Howdy! This is an example blog post that shows several types of HTML content supported in this theme.
+  Naver Boostcamp AI Tech 7기 준비와 지원, 그리고 후기
 sitemap: false
 categories: [boostcamp]
 hide_last_modified: true
