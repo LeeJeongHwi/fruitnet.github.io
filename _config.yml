@@ -59,6 +59,8 @@ menu:
         url: /mldl/
       - title: Blog
         url: /blog/
+  - title:             Archive
+    url:               https://fruitnet-blog.vercel.app/
   - title:             About
     url:               /about/
 

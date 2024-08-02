@@ -9,4 +9,5 @@ description: >
   Baekjoon : sowew54 / Leepic <br>
   ![Solved.ac Profile](http://mazassumnida.wtf/api/v2/generate_badge?boj=Leepic)
 sitemap: false
+order: 3
 ---
