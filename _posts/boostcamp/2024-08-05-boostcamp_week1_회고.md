@@ -53,7 +53,7 @@ Pytorch에 관한 기본적인 내용이었다.
 
 즉, `stride`가 일정한 상태로 sub Tensor가 구성이 되었다면, Contiguity-like Condition으로 판단 -> view 실행 가능
 
-![image-20240806130615002](..\..\images\2024-08-05-boostcamp_week1_회고\image-20240806130615002.png)
+![image-20240806130615002](../../images/2024-08-05-boostcamp_week1_회고/image-20240806130615002.png)
 
 이런걸 잘 알고있으면, 굳이 reshape (추가메모리 할당) 없이도 shape 변환을 할 수 있다. (메모리절약)
 
