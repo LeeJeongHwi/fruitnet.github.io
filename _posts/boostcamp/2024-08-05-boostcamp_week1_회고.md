@@ -8,9 +8,9 @@ categories: [boostcamp]
 hide_last_modified: true
 ---
 
+# Naver Boostcamp AI Tech 7기 Week 1 회고록
 
-
-## 2024-08-05 회고
+### 2024-08-05 회고
 
 Pytorch에 관한 기본적인 내용이었다.
 
@@ -21,4 +21,7 @@ Pytorch에 관한 기본적인 내용이었다.
 > `torch.randn, torch.rand` 등 분포를 통해서 초기화를 하는 경우에 장점과 단점에 대한 Ref
 >
 > https://resultofeffort.tistory.com/114
+
+
+### 2024-08-06 회고
 
