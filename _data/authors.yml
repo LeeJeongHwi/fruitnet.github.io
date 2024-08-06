@@ -8,8 +8,12 @@ author1:
   # Used at the bottom of each page and at the top of the `about` layout
   # Markdown enabled, can use multiple paragraphs (enabled by `|`)
   about:             
-    안녕하세요! \n
-    NLP ML Engineer를 목표로하는 이정휘입니다
+    안녕하세요! <br>
+
+    NLP ML Engineer를 목표로하는 이정휘입니다. <br>
+
+    Tech Stack : Pytorch, Scikit-Learn, Scipy, <br>
+    Currently Learning : NLP Basic
 
     
 
