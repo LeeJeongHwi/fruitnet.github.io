@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Boostcamp AI Tech 7기 Day1 - PyTorch Basic
+title: Boostcamp AI Tech 7기 Week1 - PyTorch Basic
 description: >
-  Naver Boostcamp AI Tech 7기 Day1
+  Naver Boostcamp AI Tech 7기 Week1
 sitemap: false
 categories: [boostcamp]
 hide_last_modified: true
@@ -10,7 +10,7 @@ hide_last_modified: true
 
 
 
-## 2024-08-05 Day1 기록
+## 2024-08-05 회고
 
 Pytorch에 관한 기본적인 내용이었다.
 
