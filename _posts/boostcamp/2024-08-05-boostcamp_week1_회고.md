@@ -6,6 +6,8 @@ description: >
 sitemap: false
 categories: [boostcamp]
 hide_last_modified: true
+related_posts:
+  - ./2024-07-24-boostcamp_지원후기.md
 ---
 
 # Naver Boostcamp AI Tech 7기 Week 1 회고록

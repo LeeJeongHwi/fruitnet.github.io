@@ -6,6 +6,8 @@ description: >
 sitemap: false
 categories: [boostcamp]
 hide_last_modified: true
+related_posts:
+  - ./2024-08-05-boostcamp_week1_회고
 ---
 # 네이버 부스트캠프 AI Tech 7기 지원 후기 & 합격
 
