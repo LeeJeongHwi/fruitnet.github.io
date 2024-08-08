@@ -71,6 +71,60 @@ in-place 방식이 메모리 효율이 좋은 이유는, 원본 데이터에 값
 
 
 
+### 2024-08-07 회고
+
+피어세션에서 과제 관련해서 질문했었는데, 팀원분들이 나의 실수를.. 다들 캐치해주셨다.
+
+무한한 감사..
+
+![image-20240807185814252](../../images/2024-08-05-boostcamp_week1_회고/image-20240807185814252.png)
+
+`torch.clip, torch.clamp` 의 경우 `tensor`를 반환한다. 즉.. in-place가 아니므로, 꼭 변수에 저장해야 적용이 된다. 이처럼 함수에서 in-place 파라미터가 없고, output tensor를 반환한다면 꼭 변수에 저장하도록 하자
+
+그리고 이번 강의를 들으면서 새로 배운 점에 대해 작성해본다
+
+* 선형회귀모델을 학습시키고 난 뒤 model의 파라미터를 추출하고 싶은 경우에는 다음과 같이 해보자
+
+  ```python
+  model_info = model.state_dict()
+  coef = model_info["linear.weight"]
+  bias = model_info["linear.bias"]
+  ```
+
+
+
+### 2024-08-08 회고
+
+SVM의 경우 결정경계를 그리고 Margin을 구하는데, 이때 Margin이라는건 결정경계가 가장 가까운 훈련 데이터들 사이의 거리?를 의미함 그래서 이 Margin을 최대화 하여 각 훈련 데이터들간의 카테고리를 분류하는 것인데, 선형 분리가 불가능한 문제에서도 되게 좋은 성능을 보였다
+
+SVM은 클래스 간의 Margin을 최대화하는 결정경계(초평면)을 찾는 것을 목적
+
+Logistic의 경우 선형회귀분석을 통해 데이터가 어떤 클래스에 속하는지에 대한 확률을 추정
+
+* 손실함수도 svm의 경우 힌지손실함수를 사용함
+* Logistic의 경우 Log-likelihood나 cross entropy를 사용함
+
+---
+
+BCELoss와 BCEWithLogitsLoss는 sigmoid를 붙인 Loss냐 아니냐의 차이이다.
+근데 이 **Sigmoid를 붙이냐 안붙이냐의 차이가 수치적으로 안정성을 높이는 차이**를 가진다.
+
+다중 분류의 문제에서는 BCELoss나 BCEWithLogitsLoss보단 일반 CrossEntropyLoss를 사용해서 이를 Softmax를 사용해서 0 ~ 1로 변환, 그리고 그 중 가장 높은 확률로 추정되는 class로 분류
+
+조금 더 공부해야할 점 : Likelihood, 최대가능도함수.. -> CrossEntropy를 정확히 이해하기 위함
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
