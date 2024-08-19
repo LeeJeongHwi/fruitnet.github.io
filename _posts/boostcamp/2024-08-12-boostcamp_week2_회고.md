@@ -142,6 +142,8 @@ np.sum
 
 
 
+
+
 ### 2024-08-16 회고
 
 ### Position-Wise Feed-Forward Network
@@ -232,4 +234,16 @@ Layer Norm
 * https://yonghyuc.wordpress.com/2020/03/04/batch-norm-vs-layer-norm/
 
 * https://dongsarchive.tistory.com/74
+
+
+
+> 아직 작성해야될 것들
+>
+> * Chain Rule
+> * TwoLayer Backprop processing
+> * Maximum Likelihood
+
+
+
+
 
