@@ -1,6 +1,5 @@
 ---
 layout: post
-image: ../../images/2024-08-18-Attention_is_all_you_need/image-20240818214003616.png
 title: Attention is All you Need (2017) Review
 description: >
   Attention is All you Need (2017), Transformer 논문 리뷰
