@@ -72,11 +72,6 @@ output sequence : $$(y_1,y_2,...,y_n)$$
 Residual Connection을 하기위해서 Embedding Layer와 sub Layer들의 output의 차원은 $$d_{model} = 512$$로 구성했다.
 
 
-
-
-
-
-
 #### Decoder
 
 Encoder와 동일하게 6개의 Block으로 구성되어 있으나, sub layer는 3개로 구성되어 있다.
@@ -125,10 +120,12 @@ Dot-Product가 더 빠르고, 공간효율성이 더 좋지만, 작은 차원($$
 저자들은 Attention 1번만 하는 것보다 여러번 Linear Projection하는 것이 더 성능이 좋다는 것을 발견함
 
 $$h$$번 만큼 같은 Q,K,V에 대해서 Linear Projection과 Scaled-Dot Product Attention을 수행하고 이를 concat합니다. 그리고 최종적으로 Linear Projection을 통해 최종 값을 얻음
+
 $$
 \text{MultiHead}(Q,K,V) = \text{concat}(\text{head}_1, \text{head}_2, ..., \text{head}_h) W^O \\
 \text{where} \ \ \text{head}_i = \text{Attention}(QW_i^Q, KW_i^K, VW_i^V)
 $$
+
 해당 논문에서는 8개의 Head를 사용했고, 따라서 $$d_k$$는 $$d_{model}/h = 64$$ 가 됨
 
 이 Multi-Head Attention에서 각 Linear들은 각기 다른 $$W$$를 갖기 때문에 여러 경우에 대해 Attention을 가져갈 수 있는 장점이 있음
@@ -197,7 +194,7 @@ Positional Encoding 과정
 * sin,cos 모두 [-1, 1] 사이의 값을 가지는 "주기함수"이여서, Embedding Vector 값의 의미가 변질되지 않도록 하는 크기이다
 
 * 각 단어의 위치를 나타낼 수 있을 뿐만 아니라 상대 위치 정보를 학습할 수 있음
-  * 
+  * 위 Figure를 보면 Position Embedding 값은 Vector로 표현되는데, Sin,Cos를 섞어서 표현하기 때문에, 고유한 값을 가지게 됨
   * $$\sin(x)$$와 $$\sin(x+k)$$는 $$k$$의 차이를 가지므로, 모델이 단어 간의 상대적 위치 학습 가능
 * 모델이 보지못한 길이의 시퀀스에서도 일반화 가능 (주기적 특성)
 * 단순한 연산이므로 연산비용이 낮음
@@ -206,14 +203,69 @@ Positional Encoding 과정
 
 ### Why Self-Attention
 
+이 섹션에서는 Recurrent, Convolution보다 Self-Attention이 좋은지에 대해서 설명함
+
+![image-20240820022548833](../../images/2024-08-18-Attention_is_all_you_need/image-20240820022548833.png)
+
+3가지 측면에서 비교했음
+
+#### Total Computational Complexity per layer
+
+self-Attention보다 Recurrent의 계산복잡도가 더 좋으려면 Sequence Length $$n$$이 더 커야되는데, 일반적으로는 Representation Dimension인 $$d$$가 더 크기 때문에 Self-attention이 complexity가 더 작음
+
+#### amount of computation the can be parallelized
+
+Recurrent의 경우 위치마다 Sequential Operation을 $$O(n)$$ 만큼, 즉 Sequence 길이만큼 수행하지만, self-attention의 경우 $$O(1)$$이 걸리기 때문에 더 효율적임 --> Parallel System에서 유리함
+
+
+
+#### the path length between long-range dependencies
+
+many sequence transduction task에서 장기의존성 학습하는 것은 **Key Challenge**임 
+
+forward-backward 경로의 길이가 짧을수록 장기의존성 학습하기가 더 쉬운데, 각 Token들과 모든 token들과 참조해서 Corrleation information을 구해서 더하기 때문에, Maximum path length가 $$O(1)$$을 가짐 -> 더 쉽게 학습할 수 있음
+
+Recurrent의 경우 한 token에 Layer 하나씩 추가되기 때문에 $$O(n)$$을 가짐
+
+> 해당 문제에서의 path Length는 (Encoder Sequence Length + Decoder Sequence Length)
+
+
+
+## Result
+
+> 학습환경과 학습과정은 Skip
+
+Residual Dropout (p=0.1)과 Label Smoothing (eps= 0.1) 으로 정규화를 해주었음
+![image-20240820220100645](../../images/2024-08-18-Attention_is_all_you_need/image-20240820220100645.png)
+
+그때당시 WMT 2014 데이터셋에서 BLEU 점수를 가장 높게 받았음을 확인할 수 있음
+
+추가로 English Constituency Parsing Task에서에 대한 일반화를 검증하였음
+![image-20240820220950553](../../images/2024-08-18-Attention_is_all_you_need/image-20240820220950553.png)
+
+해당 task는 출력에 대한 구조적 제약을 받고 입력이 훨씬 길다는 것이 특징임
+
+2가지방향으로 학습을 해서 테스트를 해보았다고함
+
+* WSJ dataset만 학습
+* Berkley Parser Corpora를 사용해서 Semi-Supervised
+
+두 가지 방향 모두 기존 RNN보다 성능이 좋다는 점을 보여줌
+
+[BLEU에 관한 참고 사이트](https://wikidocs.net/31695)
+
 
 
 ---
 
-Reference
+### Reference
+
+
 
 https://aistudy9314.tistory.com/63
 
 https://www.blossominkyung.com/deeplearning/transfomer-positional-encoding
 
 https://tigris-data-science.tistory.com/entry/%EC%B0%A8%EA%B7%BC%EC%B0%A8%EA%B7%BC-%EC%9D%B4%ED%95%B4%ED%95%98%EB%8A%94-Transformer5-Positional-Encoding
+
+https://ok-lab.tistory.com/57#google_vignette
