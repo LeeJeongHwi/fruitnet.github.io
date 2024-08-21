@@ -8,7 +8,7 @@ categories: [paperreview]
 hide_last_modified: false
 ---
 
-# Attention is All you Need (2017) Review (작성중)
+# Attention is All you Need (2017) Review
 
 > 영어를 그다지 잘하지 못하는 편이라 오역이 있을 수 있습니다
 
@@ -40,6 +40,8 @@ Large, Limited Data에 대한 English [constituency parsing](https://ok-lab.tist
 
 
 
+
+
 ## Model Architecture
 
 ![image-20240818214003616](../../images/2024-08-18-Attention_is_all_you_need/image-20240818214003616.png)
@@ -50,7 +52,7 @@ Large, Limited Data에 대한 English [constituency parsing](https://ok-lab.tist
 
 Symbol Sequence (input) : $$(x_1, x_2, ... , x_n)$$
 
-Continuous Representation : $$\bold{z}=(z_1,z_2,...,z_n)$$ 
+Continuous Representation : $${z}=(z_1,z_2,...,z_n)$$ 
 
 output sequence : $$(y_1,y_2,...,y_n)$$
 
@@ -122,7 +124,7 @@ Dot-Product가 더 빠르고, 공간효율성이 더 좋지만, 작은 차원($$
 $$h$$번 만큼 같은 Q,K,V에 대해서 Linear Projection과 Scaled-Dot Product Attention을 수행하고 이를 concat합니다. 그리고 최종적으로 Linear Projection을 통해 최종 값을 얻음
 
 $$
-\text{MultiHead}(Q,K,V) = \text{concat}(\text{head}_1, \text{head}_2, ..., \text{head}_h) W^O \\
+\text{MultiHead}(Q,K,V) = \text{concat}(\text{head}_1, \text{head}_2, ..., \text{head}_h) W^O \\ \\
 \text{where} \ \ \text{head}_i = \text{Attention}(QW_i^Q, KW_i^K, VW_i^V)
 $$
 
@@ -146,6 +148,19 @@ $$
 3. Decoder Self-Attention
    * 전체적인 과정은 Encoder Self attention과 같은데, Masking Vector를 사용
      * 단어를 예측할 때 단어를 미리 참조하지 않도록 함
+     
+       ```python
+       trg_sub_mask = torch.tril(torch.ones(trg_len, trg_len)).type(torch.ByteTensor).to(self.device)
+       
+       # if trg_len=5
+       tensor([[1, 0, 0, 0, 0],
+               [1, 1, 0, 0, 0],
+               [1, 1, 1, 0, 0],
+               [1, 1, 1, 1, 0],
+               [1, 1, 1, 1, 1]], dtype=torch.uint8)
+       ```
+     
+       * 이렇게 각 단어별로 0으로 Mask, 1로 활성화시키는 방식으로 Masking Vector를 사용함
      * Auto Regressive Property를 보존해야하기때문
 
 
