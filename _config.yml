@@ -57,7 +57,7 @@ menu:
         url: /algorithm/
       - title: ML/DL
         url: /mldl/
-      - title: MLops
+      - title: MLOps
         url: /mlops/
       - title: Blog
         url: /blog/
