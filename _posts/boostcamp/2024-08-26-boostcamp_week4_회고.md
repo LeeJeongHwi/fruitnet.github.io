@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Boostcamp AI Tech 7기 Week4
+title: Boostcamp AI Tech 7기 Week 4 회고록
 description: >
-  Naver Boostcamp AI Tech 7기 Week4 회고록
+  Naver Boostcamp AI Tech 7기 Week 4 회고록
 sitemap: false
 categories: [boostcamp]
 hide_last_modified: false
@@ -11,7 +11,7 @@ related_posts:
   - ./2024-08-12-boostcamp_week3_회고.md
 ---
 
-# Naver Boostcamp AI Tech 7기 Week4 회고록
+# Naver Boostcamp AI Tech 7기 Week 4 회고록
 
 일단... 일주일간 쓰던 회고록이 단 한번의 클릭으로 날아가버린 상태로....
 
