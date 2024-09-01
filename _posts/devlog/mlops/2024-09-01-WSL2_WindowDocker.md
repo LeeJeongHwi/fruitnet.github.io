@@ -1,6 +1,6 @@
 ---
 layout: post
-title: [MLOps] WSL2 설정과 Nvidia-Docker 설치 (1)
+title: MLOps) WSL2 설정과 Nvidia-Docker 설치 (1)
 description: >
   WSL2 설정과 nvidia-Docker 설치
 sitemap: false
@@ -10,7 +10,7 @@ related_posts:
   - ./2024-08-25-MLOps_춘추전국시대.md
 ---
 
-# [MLOps] WSL2 설정과 Nvidia-Docker 설치 (1)
+# MLOps) WSL2 설정과 Nvidia-Docker 설치 (1)
 
 Ubuntu를 따로 설치하기가 힘들고.. 그럴만한 하드나 그런것들이 없기에... WSL2랑 Docker를 설치해서 해보려고한다.
 
@@ -20,7 +20,7 @@ Ubuntu를 따로 설치하기가 힘들고.. 그럴만한 하드나 그런것들
 
 우선 Windows 기능부터 키자
 
-<img src="../../../images/2024-09-01-WSL2_WindowDocker/image-20240901120307558.png" alt="image-20240901120307558" style="zoom:67%;" />
+![image-20240901120307558](../../../images/2024-09-01-WSL2_WindowDocker/image-20240901120307558.png)
 
 켜줄 목록은 다음과 같다.
 
@@ -61,7 +61,7 @@ wsl --set-default-version 2
 
 이미.. 나의 용량은 게임으로 인해 C드라이브가 꽊꽊ㄲ....
 
-![image-20240901154303640](../../../images\2024-09-01-WSL2_WindowDocker\image-20240901154303640.png)
+![image-20240901154303640](../../../images/2024-09-01-WSL2_WindowDocker/image-20240901154303640.png)
 
 따라서 HDD로 ubuntu 드라이브인 `ext4.vhdx` 를 옮기고자 한다.
 
@@ -77,7 +77,7 @@ e:\ubuntu> wsl --import ubuntu2204 ./exp_ubuntu.tar ./
 
 현재 폴더에 `ubuntu2204.tar` 파일로 ubuntu-22.04를 추출하고, 현재 폴더에 추출했던 `tar` 파일을 다시 임포트해서 다음과 같이 적용
 
-![image-20240901165607235](../../..\images\2024-09-01-WSL2_WindowDocker\image-20240901165607235.png)
+![image-20240901165607235](../../../images/2024-09-01-WSL2_WindowDocker/image-20240901165607235.png)
 
 #### (2) unregister
 
@@ -91,7 +91,7 @@ e:\ubuntu> wsl --set-default ubuntu2204
 
 추가로, 이렇게 D드라이브로 옮겨서 실행시킨 경우 root로 기본 User로 설정되어있는데,
 
-이를 WSL2 내 `/etc/wsl.conf`에 추가시킨다
+이를 WSL2 내 `/etc/wsl.conf`에 추가시킨다
 
 ~~~shell
 // file: "/etc/wsl.conf"
@@ -109,11 +109,11 @@ default=jeonghwi
 
 우선 Nvidia-Driver (Studio)로 설치 (for WSL2) 
 
-* 이 과정은 스킵
+* 이 과정은 스킵
 
 Cuda Toolkit은 현재 Pytorch 최신버전에 맞춰서 12.1로 설치
 
-![image-20240901201230726](../../..\images\2024-09-01-WSL2_WindowDocker\image-20240901201230726.png)
+![image-20240901201230726](../../../images/2024-09-01-WSL2_WindowDocker/image-20240901201230726.png)
 
 이렇게 Cuda Toolkit 까지 설치 완료
 
@@ -135,7 +135,7 @@ $ source ~/.bashrc
 $ _switch_cuda 12.1
 ~~~
 
-![image-20240901210133679](../../..\images\2024-09-01-WSL2_WindowDocker\image-20240901210133679.png)
+![image-20240901210133679](../../../images/2024-09-01-WSL2_WindowDocker/image-20240901210133679.png)
 
 
 
@@ -143,11 +143,11 @@ $ _switch_cuda 12.1
 
 추후에 MLOps for all 강의에서 Kubernetes를 사용하게되는데, 그때 버전을 좀 맞춰서 설치하는 것 보다 MLOps for MLE 강의에서 미리 설치하고 넘어가자
 
-![image-20240901211429666](../../..\images\2024-09-01-WSL2_WindowDocker\image-20240901211429666.png)
+![image-20240901211429666](../../../images/2024-09-01-WSL2_WindowDocker/image-20240901211429666.png)
 
 Docker는 20.10버전...인데 현재 27.2.0 버전을 설치했다...
 
-나중에 트러블슈팅하자..
+나중에 트러블슈팅하자..
 
 
 
