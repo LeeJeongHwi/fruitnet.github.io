@@ -4,13 +4,13 @@ title: MLOps) WSL2 설정과 Nvidia-Docker 설치 (1)
 description: >
   WSL2 설정과 nvidia-Docker 설치
 sitemap: false
-categories: [devlog,mlops]
+categories: [devlog, mlops]
 hide_last_modified: true
 related_posts:
   - ./2024-08-25-MLOps_춘추전국시대.md
 ---
 
-# MLOps) WSL2 설정과 Nvidia-Docker 설치 (1)
+# MLOps WSL2 설정과 Nvidia-Docker 설치 (1)
 
 Ubuntu를 따로 설치하기가 힘들고.. 그럴만한 하드나 그런것들이 없기에... WSL2랑 Docker를 설치해서 해보려고한다.
 
