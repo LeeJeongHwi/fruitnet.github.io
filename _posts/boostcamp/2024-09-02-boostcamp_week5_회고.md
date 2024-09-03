@@ -51,7 +51,7 @@ related_posts:
 
 어떤 툴이라기보단 하나의 방법론을 말하며, 여러회사에서도 사용하고 있다.
 
-![git-flow_overall_graph](E:/Github/fruitnet.github.io/images/2024-09-02-boostcamp_week5_회고/git-flow_overall_graph.png)
+![git-flow_overall_graph](../../images/2024-09-02-boostcamp_week5_회고/git-flow_overall_graph.png)
 
 Main 브랜치, Develop 브랜치, Feature 브랜치, Release 브랜치, Hotfix 브랜치로 나눠서 작업을 한다.
 
@@ -59,7 +59,9 @@ Main 브랜치는 서비스를 배포하는 역할을 하기에 무조건, 쉽�
 
 그래서 실제 개발할 때에는 Develop 브랜치를 새로 파서하는데, 이것도 혼동을 위해 Feature 브랜치를 따로 더 파서 개발 후 Develop에 병합시키는 것을 목적으로 한다.
 
-여기서 Commit 할때 중요한 것은 "작은 단위"로 커밋하는 것을 중점으로 둔다. 작은 단위라는 것은 주관적이지만, **실제 문제가 발생해도 롤백**하기가 쉽다.
+여기서 Commit 할때 중요한 것은 "작은 단위"로 커밋하는 것을 중점으로 둔다. 작은 단위라는 것은 주관적이지만, 
+
+**실제 문제가 발생해도 롤백**하기가 쉽다.
 
 Release 브랜치의 경우 있어도되고 없어도되는 브랜치인데, 보통 QA가 Main에 올리기 전 마지막 버그점검하는 상태를 의미한다. 그리고 버그가 생기면 다시 Develop 브랜치에서 Feature로 빼서 버그 수정하고 다시 Release하고.. 이렇게 반복
 
