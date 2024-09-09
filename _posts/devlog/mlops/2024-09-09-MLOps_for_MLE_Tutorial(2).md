@@ -24,7 +24,7 @@ related_posts:
 아래는 train 과정과 `joblib`을 통해서 모델까지 저장하는 코드
 
 ~~~python
-#//file: "db_train.py"
+// file: "db_train.py"
 import joblib
 from sklearn.datasets import load_iris
 from sklearn.metrics import accuracy_score
