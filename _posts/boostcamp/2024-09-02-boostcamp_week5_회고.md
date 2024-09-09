@@ -37,8 +37,6 @@ related_posts:
 * 피어세션 이후에 조금 많이 쉬어버림. 적당히 쉬고 다시 공부에 집중하자.
 * 강의를 단순히 적는 것보다 이해하는 것이 중요
 
-
-
 > T
 
 * 해볼만한 사이드프로젝트를 고민해보자
@@ -76,3 +74,51 @@ Hotfix는 말그대로 Release에서 QA가 발견하지 못한 버그를 Main에
 > 추가로 정리해야할 것
 
 * Rebase, 체리픽?
+
+
+
+### 2024-09-05
+
+> K
+
+* Shape를 맞춰가는 과정에 대해서 다시 한번 짜릿함을 느꼈다. 수식을 보고 구현하는 방법에 조금 익숙해져가는 모습이 뿌듯하다.
+* 강의를 이해하느라 조금 과제가 늦어졌는데, BPE과정을 직접 제대로 구현해본 것이 뿌듯함을 느꼈다.
+
+> P
+
+* 하지만 이번 과제를 구현하면서 GPT힘을 빌린 것이 아쉬웠다. 나름 수식을 보고 해결할 수 있을 것이라도 느꼈었는데, 아직 부족한가보다.
+* GPT에서 나온 코드들을 이해하지않고 그냥 사용하고 마는 것이 아쉽게 된다. 따로 정리하자.
+
+> T
+
+* 코드에 대해서 짜기 어렴움을 느낄 때 최후의 최후까지 생각하다가 GPT에게 물어보는 것, 그리고 그것을 제대로 정리하는 것
+
+`torch.bmm` : `torch.matmul`과 비슷하나, `bmm`의 경우 차원에 좀 더 제한을 거는 것
+
+
+
+concat attention, dot product attention 차이에 대해서 알아보기
+
+concat -> dot product 순으로 생겨남
+
+* RNN을 수행하기 전 이전 Hidden state를 보는 것 (concat)
+  * 즉 RNN을 시행하기 전 Attention을 미리 넣는 것
+* 현재 time step의 Hidden representation을 참조하는 것
+* 간단하게 둘의 차이점은 "시점"의 차이라고 본다.
+  * 이전의 Hidden representation의 Attention을 포함시킨 후 RNN을 돌리는 것
+  * RNN을 돌린 후 현재의 Hidden representation의 Attention을 계산하는 것
+
+
+
+### 2024-09-06
+
+최근 sLLM에 대해서 관심이 가지게되서 여러가지 sLLM 방법론에 대해서 알아보았었는데, 결국은? 최적화가 가장 큰 관점이다.
+
+Pruning, Knowledge Distillation, Quantization 등..
+
+이 3가지 부분에 대해서는 더 공부해보자, 나는 가장 주의깊게 보는 부분은 Knowledge Distillation 파트이다.
+
+
+
+
+
