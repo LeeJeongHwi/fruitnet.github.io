@@ -82,7 +82,7 @@ Hotfix는 말그대로 Release에서 QA가 발견하지 못한 버그를 Main에
 > K
 
 * Shape를 맞춰가는 과정에 대해서 다시 한번 짜릿함을 느꼈다. 수식을 보고 구현하는 방법에 조금 익숙해져가는 모습이 뿌듯하다.
-* 강의를 이해하느라 조금 과제가 늦어졌는데, BPE과정을 직접 제대로 구현해본 것이 뿌듯함을 느꼈다.
+* 강의를 이해하느라 조금 과제가 늦어졌는데, BPE과정을 직접 제대로 구현해본 것이 뿌듯함을 느꼈다.
 
 > P
 
@@ -91,7 +91,7 @@ Hotfix는 말그대로 Release에서 QA가 발견하지 못한 버그를 Main에
 
 > T
 
-* 코드에 대해서 짜기 어렴움을 느낄 때 최후의 최후까지 생각하다가 GPT에게 물어보는 것, 그리고 그것을 제대로 정리하는 것
+* 코드에 대해서 짜기 어렴움을 느낄 때 최후의 최후까지 생각하다가 GPT에게 물어보는 것, 그리고 그것을 제대로 정리하는 것
 
 `torch.bmm` : `torch.matmul`과 비슷하나, `bmm`의 경우 차원에 좀 더 제한을 거는 것
 
@@ -106,7 +106,7 @@ concat -> dot product 순으로 생겨남
 * 현재 time step의 Hidden representation을 참조하는 것
 * 간단하게 둘의 차이점은 "시점"의 차이라고 본다.
   * 이전의 Hidden representation의 Attention을 포함시킨 후 RNN을 돌리는 것
-  * RNN을 돌린 후 현재의 Hidden representation의 Attention을 계산하는 것
+  * RNN을 돌린 후 현재의 Hidden representation의 Attention을 계산하는 것
 
 
 
