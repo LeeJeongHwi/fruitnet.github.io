@@ -21,7 +21,7 @@ related_posts:
 
 추가적으로 `data-generator`에서 생성해서 postgreSQL에 삽입한 데이터를 기반으로 불러와서 모델을 생성하는 과정까지 한다.
 
-아래는 train 과정과 `joblib`을 통해서 모델까지 저장하는 코드
+아래는 train 과정과 `joblib`을 통해서 모델까지 저장하는 코드
 
 ~~~python
 # file: "db_train.py"

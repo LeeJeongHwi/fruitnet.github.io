@@ -61,6 +61,8 @@ menu:
         url: /mlops/
       - title: Blog
         url: /blog/
+      - title: Pytorch
+        url: /pytorch/
   - title:             Paper Review
     url:               /paperreview/
   - title:             Archive
