@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "98fb1782453a66c2",
+        "id": "969d0fc828ed7337",
         "type": "tabs",
         "children": [
           {
-            "id": "67b6443fa6c2e12a",
+            "id": "4d8f35633dc146a3",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_featured_categories/pytorch.md",
+                "file": "_posts/boostcamp/2024-09-10-boostcamp_week6_회고.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_featured_categories/pytorch.md",
+                "file": "_posts/boostcamp/2024-09-10-boostcamp_week6_회고.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_featured_categories/pytorch.md",
+                "file": "_posts/boostcamp/2024-09-10-boostcamp_week6_회고.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_featured_categories/pytorch.md"
+                "file": "_posts/boostcamp/2024-09-10-boostcamp_week6_회고.md"
               }
             }
           }
@@ -146,8 +146,9 @@
       "command-palette:명령어 팔레트 열기": false
     }
   },
-  "active": "67b6443fa6c2e12a",
+  "active": "4d8f35633dc146a3",
   "lastOpenFiles": [
+    "_featured_categories/pytorch.md",
     "_featured_categories/blog.md",
     "_featured_categories/boostcamp.md",
     "_featured_categories/devlog.md",
@@ -155,7 +156,6 @@
     "_featured_categories/mldl.md",
     "_featured_categories/mlops.md",
     "_featured_categories/paperreview.md",
-    "_featured_categories/pytorch.md",
     "404.md",
     "about.md",
     "CHANGELOG.md",
