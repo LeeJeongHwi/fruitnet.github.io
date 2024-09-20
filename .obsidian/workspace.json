@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_posts/boostcamp/2024-09-10-boostcamp_week6_회고.md",
+                "file": "_posts/devlog/pytorch/2024-09-19-baseline_code_refactoring.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,7 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 246.5
+    "width": 477.5
   },
   "right": {
     "id": "b54c2bb6f5e546ce",
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_posts/boostcamp/2024-09-10-boostcamp_week6_회고.md",
+                "file": "_posts/devlog/pytorch/2024-09-19-baseline_code_refactoring.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_posts/boostcamp/2024-09-10-boostcamp_week6_회고.md",
+                "file": "_posts/devlog/pytorch/2024-09-19-baseline_code_refactoring.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_posts/boostcamp/2024-09-10-boostcamp_week6_회고.md"
+                "file": "_posts/devlog/pytorch/2024-09-19-baseline_code_refactoring.md"
               }
             }
           }
@@ -148,6 +148,7 @@
   },
   "active": "4d8f35633dc146a3",
   "lastOpenFiles": [
+    "_featured_categories/mldl.md",
     "_posts/devlog/pytorch/2024-09-19-baseline_code_refactoring.md",
     "_posts/boostcamp/2024-09-10-boostcamp_week6_회고.md",
     "_featured_categories/pytorch.md",
@@ -155,7 +156,6 @@
     "_featured_categories/boostcamp.md",
     "_featured_categories/devlog.md",
     "_featured_categories/example.md",
-    "_featured_categories/mldl.md",
     "_featured_categories/mlops.md",
     "_featured_categories/paperreview.md",
     "404.md",

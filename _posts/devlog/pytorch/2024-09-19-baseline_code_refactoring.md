@@ -4,7 +4,7 @@ title: Hugging Face Model을 pytorch로 학습시키는 Baseline 코드
 description: >
   Boostcamp-level1 Project Baseline code
 sitemap: false
-categories: [devlog,pytorch]
+categories: [devlog, pytorch]
 hide_last_modified: true
 ---
 

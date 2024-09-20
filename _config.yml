@@ -3,7 +3,7 @@
 
 # Uncomment and set the URL of your site (with protocol, e.g. `https://`)
 # NOTE: You don't need to provide this property when hosting on GitHub Pages or Netlify.
-url:                   https://leejeonghwi.github.io/fruitnet.github.io/
+# url:                   https://leejeonghwi.github.io/fruitnet.github.io/
 
 # Uncomment and set the "base URL" of your site.
 # When your site is in a subdirectory, set to `/<name of directory>`,
@@ -55,8 +55,6 @@ menu:
     submenu:
       - title: Algorithm
         url: /algorithm/
-      - title: ML/DL
-        url: /mldl/
       - title: MLOps
         url: /mlops/
       - title: Blog
