@@ -358,4 +358,3 @@ def predict(self, model, dataloader):
 - Model, Optimizer 등등 구성요소 모듈화
     
     - 만약에 Model별 학습방법이 다르다면 어떻게 해야하는가.. Trainer를 따로 만들어야하는가..? (KR-SBERT 예시)
-
